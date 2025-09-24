@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RevMed Design System - Medical Tech UI */
+
+@layer base {
+  :root {
+    /* RevMed Brand Colors */
+    --charcoal: 220 14% 4%;        /* #0B0B0D - Main dark */
+    --light-gray: 217 11% 91%;     /* #E6E7EB - Light backgrounds */
+    --teal: 178 85% 42%;           /* #11C5BB - Accent color */
+    --teal-light: 178 85% 95%;     /* Light teal for backgrounds */
+    --teal-dark: 178 85% 35%;      /* Darker teal for hover states */
+    
+    /* Semantic tokens based on RevMed palette */
+    --background: 0 0% 100%;
+    --foreground: var(--charcoal);
+    
+    --card: 0 0% 100%;
+    --card-foreground: var(--charcoal);
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--charcoal);
+    
+    --primary: var(--teal);
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: var(--light-gray);
+    --secondary-foreground: var(--charcoal);
+    
+    --muted: var(--light-gray);
+    --muted-foreground: 220 8% 46%;
+    
+    --accent: var(--teal-light);
+    --accent-foreground: var(--charcoal);
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 217 11% 88%;
+    --input: 217 11% 88%;
+    --ring: var(--teal);
+    
+    --radius: 0.75rem;
+    
+    /* Medical UI specific tokens */
+    --medical-bg: 220 20% 98%;
+    --medical-border: 217 11% 85%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 217 91% 60%;
+    
+    /* Typography scale */
+    --font-heading: 'Sora', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--teal)) 0%, hsl(var(--teal-dark)) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--light-gray)) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(11, 11, 13, 0.1);
+    --shadow-md: 0 4px 12px rgba(11, 11, 13, 0.15);
+    --shadow-lg: 0 10px 40px rgba(11, 11, 13, 0.2);
+    --shadow-teal: 0 8px 32px rgba(17, 197, 187, 0.25);
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark {
+    --background: var(--charcoal);
+    --foreground: 0 0% 95%;
+    
+    --card: 220 14% 6%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 220 14% 6%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: var(--teal);
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 14% 12%;
+    --secondary-foreground: 0 0% 90%;
+    
+    --muted: 220 14% 12%;
+    --muted-foreground: 220 8% 60%;
+    
+    --accent: 220 14% 12%;
+    --accent-foreground: 0 0% 90%;
+    
+    --border: 220 14% 12%;
+    --input: 220 14% 12%;
+    
+    --medical-bg: 220 14% 8%;
+    --medical-border: 220 14% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
