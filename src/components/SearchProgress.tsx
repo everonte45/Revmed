@@ -12,7 +12,7 @@ import {
   AlertCircle,
   FileText,
   Loader2,
-  X \
+  X
 } from "lucide-react";
 import { SearchProgress as ProgressType } from "@/hooks/usePubMedSearch";
 
@@ -186,6 +186,7 @@ export const SearchProgress = ({ progress, isSearching, onStop }: SearchProgress
     </Card>
   );
 };
+
 
 
 
